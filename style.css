@@ -1,6 +1,10 @@
 * {
   text-decoration: none !important;
 }
+.row {
+  padding-right: 0px;
+  margin-right: 0px;
+}
 p,
 a {
   color: #898c8e;
@@ -45,6 +49,10 @@ a:hover {
   height: 300px;
   flex: 0 0 auto;
   margin-left: 5px;
+}
+
+footer p {
+  cursor: pointer;
 }
 /* .slides::-webkit-scrollbar {
   display: none!important;

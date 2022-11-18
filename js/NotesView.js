@@ -24,8 +24,19 @@ export default class NotesView {
     const inputTitle = this.root.querySelector('.notes_title')
     const inputBody = this.root.querySelector('.notes__body')
 
-    btnAddNote.addEventListener('click', () => {
-      this.onNoteAdd()
-    })
+     btnAddNote.addEventListener("click", () => {
+            this.onNoteAdd();
+        });
+
+        [inputTitle, inputBody].forEach(inputField => {
+            inputField.addEventListener("blur", () => {
+                const updatedTitle = inputTitle.value.trim();
+                const updatedBody = inputBody.value.trim();
+
+                this.onNoteEdit(updatedTitle, updatedBody);
+            });
+        });
+
+        this.updateNotePreviewVisibility(false);
+    }
   }
-}
